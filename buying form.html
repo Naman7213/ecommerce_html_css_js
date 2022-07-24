@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EXPLORE!!!</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background-image: url("1.webp");
+		}
+		div{
+			margin-left: 500px;
+			width: 500px;
+			position: relative;
+			top: 40px;
+			border:6px solid #ffae34;
+			height: 580px;
+			background-color: #353535b0;
+		}
+		div h1{
+			position: relative;
+			left: 140px;
+			top: 40px;
+			font-weight:bolder;
+			color: #ffae34;
+		}
+		div p{
+			position: relative;
+			left: 150px;
+			top: 50px;
+			color: white;
+		}
+		div form{
+			position: relative;
+			left: 130px;
+			top: 70px; 
+		}
+		button{	
+			position: relative;
+			left: 50px;
+			border:2px solid white;
+			border-radius: 10px;
+			background-color: #ffae34be;
+			color: white;
+			height: 50px;
+			width: 150px;
+			font-size: 17px; 	
+			cursor: pointer;
+			font-family:'Times New Roman', Times, serif;
+			transition: background-color;
+			transition-duration: 0.5s;
+			transition-timing-function: ease-out;
+			top: 10px;
+		}
+    	button:hover {
+    		border-color: #ffae34; 
+    		background-color: rgba(0, 0, 0, 0.822);
+    	}
+		input{
+			height: 35px;
+			width: 250px;
+			border-radius: 10px;
+			border-width: 4px;
+			border-color:#ffae34;
+		}
+		span{
+
+			color: white;
+			font-weight: bold;
+		}
+		@media only screen and (max-width: 600px){
+			div{
+				margin-left: 30px;
+				width: 400px;
+			}
+			div h1{
+				position: relative;
+				left:50px;
+			}
+			div p{
+				position: relative;
+				left: 60px; 
+			}
+			div form{
+				position: relative;
+				left: 70px;
+			}
+			button{
+				width: 135px;
+			}
+			#extrabtn1{
+				margin-left: 1rem;
+				width: 130px;
+			}
+		}
+	</style>
+	<link rel="icon" type="image/x-icon" href="Images/android-chrome-512x512.png">
+</head>
+<body>
+	<div>
+	<h1>ENQUIRY FORM</h1>
+	<p> ~ Enter The Details and<br> &nbsp &nbsp get Answers to your queries<br>&nbsp &nbsp via Email or Message.</p>
+	<form onsubmit="return validation()">
+		<input type="text" id="username" placeholder="Username"><br>
+		<span id="usernameerror"></span><br>
+		<input type="text" id="mail" placeholder="Email"><br>
+		<span id="emailerror"></span><br>
+		<input type="number" id="num" placeholder="Number"><br>
+		<span id="mobileerror"></span><br>
+		<button type="submit">Get Info</button><br><br><br>
+		<button type="button" style="position: relative; left:-80px" id="extrabtn1">GET Recommendations</button>
+		<button type="button" style="position: relative; left: 41px" id="extrabtn2">Access to <br>Newsletter</button>
+	</form>
+	</div>
+	<script type="text/javascript">
+		function validation(){
+			var uname= document.getElementById("username").value;
+			var email= document.getElementById("mail").value;
+			var mobile= document.getElementById("num").value;
+			if(/[a-z]{2,10}/.test(uname)){
+				document.getElementById("usernameerror").innerHTML=" ";
+			}
+			else{
+				document.getElementById("usernameerror").innerHTML="Username should be of 2-10 characters!!";
+				return false;
+			}
+			if(/[a-z0-9]+@[a-z]+[\.]{1}[a-z]{3}/.test(email)){
+				document.getElementById("emailerror").innerHTML=" ";
+			}
+			else{
+				document.getElementById("emailerror").innerHTML="Please provide correct email";
+				return false;
+			}
+			if(/[\d]{10}/.test(mobile)){
+				document.getElementById("mobileerror").innerHTML=" ";
+			}
+			else{
+				document.getElementById("mobileerror").innerHTML="Please provide correct number";
+				return false;
+			}
+			
+		}
+	</script>
+</body>
+</html>

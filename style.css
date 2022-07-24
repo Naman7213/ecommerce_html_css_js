@@ -1,0 +1,316 @@
+*{
+	margin:0px;
+	padding: 0px;
+	box-sizing: border-box;
+	 font-family: "Montserrat-SemiBold";
+}
+#head{
+	 
+	 background-image: linear-gradient(to right, rgba(0, 0, 0, 0.685) 60%, rgba(112, 105, 105, 0.699)); 
+	height: 90px;	
+}
+
+#menubar{
+	width: 100vw;
+	height: 1000vh;
+	background-color: #044d77c7;
+	z-index: 1000; 
+	display: none;
+}
+#menubar ul{
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	margin-left: 18rem;
+}
+#menubar ul li{
+	color: white;
+	font-size: 30px;
+	margin-top: 8rem;
+}
+#nav-menu{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	color: white;
+}
+#nav-menu li h1{
+	font-size:8rem;
+}
+#nav-menu li a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	font-size: 2rem;
+	transition: font-size 0.8s ease-in-out;
+}
+#nav-menu p{
+	padding-top: 3rem;
+	display: none;
+}
+#nav-menu li a:hover{
+	color: coral;
+	font-size: 4rem;
+}
+#nav-menu li a#login{
+	color: coral;
+}
+#nav-menu li a#login:hover{
+	color: white;
+}
+#welcomediv{
+	display: flex;
+	justify-content: space-around;
+}
+#welcomediv p{
+	font-size: 30px;
+	color: white;
+	word-spacing: 10px;
+	font-weight: 100px;
+}
+#welcomediv img{
+	height: 35rem;
+	margin-left: 10px;
+	clip-path: circle(66.5% at 28% 48%);
+}
+
+
+
+body, html {
+  height: 100%;
+}
+#parallax{
+	background-image: url('Images/img.jpg');
+	height: auto;
+	width: auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.icon-bar {
+  position: fixed;
+  top: 20%;
+  z-index: 100;
+}
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+.icon-bar a:hover {
+  background-color: coral;
+  font-size: 4rem;
+}
+#showcase{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around; 
+}
+.box{
+	width: 17rem;
+	height: 20rem;
+	position: relative;
+}
+#showcase .box img{
+	width: 20rem;
+	height: 24rem;
+	opacity: 1;
+	display: block;
+	transition: .5s ease;
+  	backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.box:hover img {
+  opacity: 0.3;
+  transform: scale(1.2,1.2);
+}
+.box:hover .middle {
+  opacity: 1;
+}
+.text {
+  background-color: #021c19;
+  color: white;
+  font-size: 16px;
+  padding: 13px 24px;
+}
+
+#animation{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+#animation #change-content:after{
+	content:'';
+	animation:changetext 5s infinite linear alternate;
+	color: coral;
+	font-weight: bold;
+	font-size: xx-large;
+}
+.swiper-slide a img{
+	width: 60rem; 
+}
+@keyframes changetext{
+	0%{content: "Iphone";}
+	25%{content: "One Plus";}
+	65%{content: "Samsung";}
+	100%{content: "RealMe";}
+}
+#poster img{
+	width: 100%;
+	height: 60rem;
+	margin-top: 7rem;
+	padding: 5rem;
+}
+#poster p{
+	color: white;
+	font-weight: bold;
+	font-size: 26px;
+	font-family: "Montserrat-SemiBold";
+	display: none;
+	text-align: center;
+	margin-left: 5rem;
+}
+#poster button{
+	margin-left: 5rem;
+	padding: 10px;
+	border-color: coral;
+	border-radius: 40px;
+	/*color:#15f4ee;*/
+	color: coral;
+	background-color: black;
+	transition: 1s;
+	outline: 0;
+}
+#poster button:hover{
+	box-shadow: 0 3px 15px coral, 0 3px 15px coral, 0 3px 15px coral, 0 3px 15px coral;
+	text-shadow: 0 2px 3px coral, 0 2px 3px coral;
+}
+.swiper-container{
+	height: auto;
+	width: auto;
+}
+.swiper-slide{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-button-next{
+	margin-right: 5rem; 
+}
+.swiper-button-prev{
+	margin-left: 5rem;
+}
+.swiper-slide img{
+	width: 100%;
+	height: 66rem;
+	padding: 5rem;
+}
+#general-info{
+	display: flex;
+	height: auto;
+	width: auto;
+	justify-content: space-around;
+	background-color: #0000009a;
+}
+#general-info div{
+	color: white;
+}
+#general-info div img{
+	height: 9rem;
+	width: 9rem;
+	border-radius: 50%;
+}
+#foot{
+	height: auto;
+	width: 100%;
+	background-image: linear-gradient(#070707, #4e4e4e);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+#foot div{
+	color: rgb(255, 255, 255);
+
+
+}
+#foot div a button{
+	position: relative;
+	top: 26rem;
+}
+#foot div img{
+	height: 25rem;
+	width: 30rem;
+}
+#totop{
+	float: right;
+	padding: 1.5rem;
+	font-size: 2rem;
+	background-color: white;
+	color: black;
+	border:none;
+}
+#totop:hover{
+	background-color: coral;
+}
+
+@media only screen and (max-width: 600px){
+	#nav-menu li a{
+		display: none;
+	}
+	#nav-menu p{
+		display: block;
+	}
+	.icon-bar{
+		display: none;
+	}
+}
+#wrapper{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+#wrapper .card .cardimg{
+	border:1px solid transparent;
+	height: 190px;
+	width: 225px;
+	background-color:rgba(3, 3, 3, 0.582); 
+}
+#wrapper .card .cardimg img{
+	height: 190px;
+	width: 100%;
+}
+#wrapper .card .cardinfo{
+	border:1px solid transparent;
+	height: 80px;
+	width: 225px;
+	background-color:#db6a58c9; 
+}
+#wrapper .card .cardinfo h2{
+	color: white;
+	text-decoration: none;
+	position: absolute;
+	left: 49px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 lightgrey;
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 lightgrey;
+}
